@@ -9,9 +9,9 @@ namespace Stories.API.Stories.GetTopStories
 {
     public record GetTopStoriesQuery(int Count) : IRequest<GetTopStoriesResponse>;
 
-    public class DeleteOrderQueryValidator : AbstractValidator<GetTopStoriesQuery>
+    public class GetTopStoriesQueryValidator : AbstractValidator<GetTopStoriesQuery>
     {
-        public DeleteOrderQueryValidator()
+        public GetTopStoriesQueryValidator()
         {
             RuleFor(o => o.Count)
                 .GreaterThan(0);
